@@ -1,0 +1,42 @@
+spring:
+  profiles:
+    active: "prod"
+    group:
+      "dev": "dev-db,dev-mq"
+      "prod": "prod-db,prod-mq"
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: "dev-db"
+
+db: dev-db.renyajie.com
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: "dev-mq"
+
+mq: dev-mq.renyajie.com
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: "prod-db"
+
+db: prod-db.renyajie.com
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: "prod-mq"
+
+mq: prod-mq.renyajie.com

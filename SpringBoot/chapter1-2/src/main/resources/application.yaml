@@ -1,0 +1,31 @@
+# 默认激活dev配置
+spring:
+  profiles:
+    active: "dev"
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: "dev"
+
+name: dev.renyajie.com
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: "test"
+
+name: test.renyajie.com
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: "prod"
+
+name: prod.renyajie.com
